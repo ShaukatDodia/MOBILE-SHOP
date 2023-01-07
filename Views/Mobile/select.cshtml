@@ -1,0 +1,39 @@
+﻿@model List<external.Models.TBLMobile>
+@{
+    ViewBag.Title = "select";
+}
+
+
+
+<h2>Your Data</h2>
+
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Mobile name</th>
+        <th>Brand</th>
+        <th>Discount</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.m_name</td>
+            <td>@i.m_brand</td>
+            <td>@i.m_discount</td>
+            <td>@i.m_price</td>
+            <td>
+                @Html.ActionLink("delete", "delete", new { id = i.ID_PK })
+                /
+                @Html.ActionLink("updatedata", "updatedata", new { id = i.ID_PK })
+            </td>
+
+
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Enter your data", "Insert")

@@ -1,0 +1,28 @@
+﻿@model external.Models.TBLUser
+@{
+    ViewBag.Title = "Loginuser";
+}
+
+<h2>Loginuser</h2>
+
+
+
+@using (Html.BeginForm("Loginuser", "Mobile", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            <label>User Name</label>
+            @Html.TextBoxFor(tb => tb.u_name)
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label>User pass</label>
+            @Html.TextBoxFor(tb => tb.u_psw)
+        </div>
+    </div>
+    <div class="container">
+        <button type="submit">Signin</button>
+    </div>
+    @Html.ActionLink("SIGN UP plz", "insertuser")
+}

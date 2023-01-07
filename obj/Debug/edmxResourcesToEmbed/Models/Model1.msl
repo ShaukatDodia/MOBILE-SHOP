@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBMobileModelStoreContainer" CdmEntityContainer="DBMobileEntities">
+    <EntitySetMapping Name="TBLMobiles">
+      <EntityTypeMapping TypeName="DBMobileModel.TBLMobile">
+        <MappingFragment StoreEntitySet="TBLMobile">
+          <ScalarProperty Name="ID_PK" ColumnName="ID_PK" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="m_brand" ColumnName="m_brand" />
+          <ScalarProperty Name="m_discount" ColumnName="m_discount" />
+          <ScalarProperty Name="m_price" ColumnName="m_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLUsers">
+      <EntityTypeMapping TypeName="DBMobileModel.TBLUser">
+        <MappingFragment StoreEntitySet="TBLUser">
+          <ScalarProperty Name="ID_PK" ColumnName="ID_PK" />
+          <ScalarProperty Name="u_name" ColumnName="u_name" />
+          <ScalarProperty Name="u_psw" ColumnName="u_psw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

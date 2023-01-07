@@ -1,0 +1,34 @@
+﻿@model external.Models.TBLMobile
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert data</h2>
+
+
+@using (Html.BeginForm("insert", "Mobile", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            <label>Mobile name</label>
+            @Html.TextBoxFor(tb => tb.m_name)
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label>Brand</label>
+            @Html.TextBoxFor(tb => tb.m_brand)
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label>Price</label>
+            @Html.TextBoxFor(tb => tb.m_price)
+        </div>
+    </div>
+
+    <div class="container">
+        <button type="submit">Insert</button>
+    </div>
+
+}
